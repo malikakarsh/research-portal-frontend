@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.paper{
-    overflow-y: 'hidden';
-    max-height: '90vh';
+a:hover{
+    background-color: inherit;
 }
