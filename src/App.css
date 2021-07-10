@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.paper{
-    overflow-y: 'hidden';
-    max-height: '90vh';
-}
