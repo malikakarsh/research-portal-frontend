@@ -35,7 +35,7 @@ const data = [{
 }];
 const SideBarMob = (props:any) => {
     return (
-        <div className="w-8/12 bg-gray-300 h-screen border-l-2 border-gray-200 right-0 absolute">
+        <div className="w-8/12 bg-gray-300 h-screen border-l-2 border-gray-200 right-0 absolute z-10">
             {data.map((val)=> {
                 return (<a href={val.href}>
                     <div className="pt-2 pb-2 text-md pl-4 hover:bg-gray-400 cursor-pointer">
