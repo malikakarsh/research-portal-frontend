@@ -19,10 +19,17 @@ const ScrollContainer = styled.div`
   }
 `;
 
+const StyledImage = styled.img`
+transition: transform 1s;
+:hover{
+  transform: scale(1.1,1.1);
+}
+`;
+
 const AreaOfResearchCard = () => {
   return (
     <Container className="lg:m-6 m-4 grid md:grid-cols-5 grid-cols-1 rounded-lg">
-      <img
+      <StyledImage
         src={
           "https://images.unsplash.com/photo-1574170609669-5b5aa0bd7349?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
         }
@@ -33,7 +40,7 @@ const AreaOfResearchCard = () => {
         <p className="xl:text-4xl lg:text-3xl md:text-2xl text-xl mb-3 sm:mb-0 text-red-800 font-bold">
           Research
         </p>
-        <p className="xl:text-2xl lg:text-lg md:text-sm text-xs mb-3 sm:mb-0">
+        <p className="xl:text-xl lg:text-lg md:text-sm text-xs mb-3 sm:mb-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi dictum
           pellentesque id ipsum urna consectetur ut. In enim semper ultricies
           morbi. Tristique potenti est accumsan . Lorem ipsum dolor sit amet,
@@ -49,7 +56,7 @@ const AreaOfResearch = () => {
   return (
     <div className="w-screen bg-red-50" style={{ minHeight: "85vh" }}>
       <div className=" w-full col-span-2 lg:p-14 md:p-8 p-6 flex justify-center items-start flex-col">
-        <p className="xl:text-7xl lg:text-6xl md:text-5xl text-3xl text-gray-800 border-b-2 border-gray-400 pb-3 font-bold">
+        <p className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl text-gray-800 border-b-2 border-gray-400 pb-3 font-bold">
           Area of Research
         </p>
       </div>
