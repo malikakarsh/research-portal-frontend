@@ -5,10 +5,10 @@ const Content = () => {
       style={{ marginTop: "30vh", minHeight: "85vh",paddingTop:'10vh' }}
     >
       <div className=" w-full md:col-span-2 col-span-1 lg:p-14 md:p-8 p-6 flex justify-center items-start flex-col">
-        <p className="xl:text-7xl lg:text-6xl md:text-5xl text-3xl text-red-100 border-b-2 border-gray-100 pb-3 font-bold">
+        <p className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl text-red-100 border-b-2 border-gray-100 pb-3 font-bold">
           Piece of Content
         </p>
-        <p className="xl:text-2xl lg:text-xl md:text-lg text-sm text-gray-100 mt-12">
+        <p className="xl:text-xl lg:text-lg md:text-sm text-xs text-gray-100 mt-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus diam
           quam odio donec fringilla sed. Egestas pharetra, egestas consequat sit
           erat. Condimentum vel vestibulum, facilisi euismod id ornare fermentum

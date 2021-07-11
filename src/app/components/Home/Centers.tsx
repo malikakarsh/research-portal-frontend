@@ -11,12 +11,17 @@ const Container = styled.div`
   }
 `;
 
+const StyledImage = styled.img`
+transition: transform 1s;
+:hover{
+  transform: scale(1.1,1.1);
+}
+`;
+
 const CentersCard = () => {
   return (
-    <Container
-      className="bg-red-300 lg:m-6 m-4 rounded-2xl relative"
-    >
-      <img
+    <Container className="bg-red-300 lg:m-6 m-4 rounded-2xl relative">
+      <StyledImage
         src={
           "https://images.unsplash.com/photo-1579154204601-01588f351e67?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
         }
@@ -24,7 +29,9 @@ const CentersCard = () => {
         className="h-full w-full rounded-2xl"
       />
       <div className="h-1/4 w-full top-3/4 bg-red-800 bg-opacity-50 hover:bg-opacity-70 absolute flex justify-center items-center">
-        <p className="text-3xl text-red-200 font-bold">Center</p>
+        <p className=" lg:text-2xl md:text-xl text-lg text-red-200 font-bold">
+          Center
+        </p>
       </div>
     </Container>
   );
@@ -34,7 +41,7 @@ const Centers = () => {
   return (
     <div className="w-screen bg-red-50" style={{ minHeight: "85vh" }}>
       <div className=" w-full col-span-2 lg:p-14 md:p-8 p-6 flex justify-center items-start flex-col">
-        <p className="xl:text-7xl lg:text-6xl md:text-5xl text-3xl text-gray-800 border-b-2 border-gray-400 pb-3 font-bold">
+        <p className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl text-gray-800 border-b-2 border-gray-400 pb-3 font-bold">
           Centers@NITT
         </p>
       </div>
