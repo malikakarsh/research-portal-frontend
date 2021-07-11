@@ -2,8 +2,6 @@ import React from "react";
 import "tailwindcss/tailwind.css";
 import NavBar from "./components/NavBar/NavBar";
 import SideBar from "./components/SideBar/SideBar";
-import logoSm from "./NavBar/assets/nittLogo.png";
-import logoLg from "./NavBar/assets/nittLogoWide.png";
 import SideBarMob from "./components/SideBarMob/SideBarMob";
 import { useState } from "react";
 import Home from "./components/Home";
@@ -24,25 +22,6 @@ const Container = styled.div`
     border-radius: 4px;
   }
 `;
-
-const data = [
-  {
-    href: "#",
-    text: "Home",
-  },
-  {
-    href: "#",
-    text: "Research",
-  },
-  {
-    href: "#",
-    text: "Labs",
-  },
-  {
-    href: "#",
-    text: "Profs",
-  },
-];
 
 const App = () => {
   const [state, setState] = useState("none");
