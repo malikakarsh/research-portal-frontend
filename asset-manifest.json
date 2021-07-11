@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/research-portal-frontend/static/css/main.d42bf164.chunk.css",
+    "main.js": "/research-portal-frontend/static/js/main.ee431815.chunk.js",
+    "main.js.map": "/research-portal-frontend/static/js/main.ee431815.chunk.js.map",
+    "runtime-main.js": "/research-portal-frontend/static/js/runtime-main.dabbaf24.js",
+    "runtime-main.js.map": "/research-portal-frontend/static/js/runtime-main.dabbaf24.js.map",
+    "static/css/2.a73abc56.chunk.css": "/research-portal-frontend/static/css/2.a73abc56.chunk.css",
+    "static/js/2.cadc9418.chunk.js": "/research-portal-frontend/static/js/2.cadc9418.chunk.js",
+    "static/js/2.cadc9418.chunk.js.map": "/research-portal-frontend/static/js/2.cadc9418.chunk.js.map",
+    "static/js/3.5c59f506.chunk.js": "/research-portal-frontend/static/js/3.5c59f506.chunk.js",
+    "static/js/3.5c59f506.chunk.js.map": "/research-portal-frontend/static/js/3.5c59f506.chunk.js.map",
+    "index.html": "/research-portal-frontend/index.html",
+    "static/css/2.a73abc56.chunk.css.map": "/research-portal-frontend/static/css/2.a73abc56.chunk.css.map",
+    "static/css/main.d42bf164.chunk.css.map": "/research-portal-frontend/static/css/main.d42bf164.chunk.css.map",
+    "static/js/2.cadc9418.chunk.js.LICENSE.txt": "/research-portal-frontend/static/js/2.cadc9418.chunk.js.LICENSE.txt",
+    "static/media/nittLogo.200fc918.png": "/research-portal-frontend/static/media/nittLogo.200fc918.png",
+    "static/media/nittLogoWide.54460003.png": "/research-portal-frontend/static/media/nittLogoWide.54460003.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dabbaf24.js",
+    "static/css/2.a73abc56.chunk.css",
+    "static/js/2.cadc9418.chunk.js",
+    "static/css/main.d42bf164.chunk.css",
+    "static/js/main.ee431815.chunk.js"
+  ]
+}
