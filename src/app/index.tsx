@@ -6,6 +6,8 @@ import SideBarMob from "./components/SideBarMob/SideBarMob";
 import { useState } from "react";
 import Home from "./components/Home";
 import styled from "styled-components";
+import Profile from "./components/Profile/Profile";
+import {BrowserRouter as Router,  Switch,  Route} from "react-router-dom";
 
 const Container = styled.div`
   overflow-y: scroll;
@@ -49,6 +51,7 @@ const App = () => {
   const NavigationBar = () => {
     return (
       <div className="flex">
+        <Router>
         <div className="flex-1">
           <NavBar
             toggleSideBar={toggleSideBar}
@@ -61,13 +64,21 @@ const App = () => {
               <div style={{ display: mobState }}>
                 <SideBarMob></SideBarMob>
               </div>
-              <Home />
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route exact path="/profile">
+                  <Profile />
+                </Route>
+              </Switch>
             </Container>
           </div>
         </div>
         <div style={{ display: state }}>
           <SideBar closeSideBar={closeSideBar}></SideBar>
         </div>
+        </Router>
       </div>
     );
   };
