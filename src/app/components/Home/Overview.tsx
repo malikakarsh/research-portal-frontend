@@ -23,10 +23,10 @@ const Container = styled.div`
 const Overview = () => {
   return (
     <Container className="h-full bg-gray-300 absolute lg:p-9 md:p-6 p-4 flex justify-around items-start flex-col">
-      <p className=" xl:text-7xl lg:text-6xl md:text-5xl text-3xl text-gray-800 border-b-2 border-gray-400 pb-3 font-bold">
+      <p className=" xl:text-5xl lg:text-4xl md:text-3xl text-2xl text-gray-800 border-b-2 border-gray-400 pb-3 font-bold">
         OVERVIEW
       </p>
-      <p className="xl:text-2xl lg:text-xl md:text-lg text-sm text-gray-700">
+      <p className="xl:text-xl lg:text-lg md:text-sm text-xs text-gray-700">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus diam
         quam odio donec fringilla sed. Egestas pharetra, egestas consequat sit
         erat. Condimentum vel vestibulum, facilisi euismod id ornare fermentum
