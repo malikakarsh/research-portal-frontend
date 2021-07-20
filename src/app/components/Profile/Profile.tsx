@@ -81,15 +81,6 @@ const Profile = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col text-lg antialiased items-center sm:mg-2 lg:m-5 font-semibold rounded-lg border shadow-lg sm:p-2 h-80">
-                                {/* <div className="invisible p-5">
-                                    <div>
-                                        <img className="w-32 max-h-32 mb-6" src={sampleImg} alt="profile"></img>
-                                    </div>
-                                    <div className="text-center">
-                                        <h3 className="text-lg font-semibold mb-2">{val.name}</h3>
-                                        <h3 className="text-lg font-semibold mb-2">{val.dept}</h3>
-                                    </div>
-                                </div> */}
                                 <div className="flex h-72 items-center text-2xl">
                                     <div className="flex text-black">
                                         <a href="https://delta.nitt.edu/" target="_blank" className="hover:text-red-700 p-4" style={{textDecoration: 'none'}}><i className="fab fa-instagram"></i></a>
