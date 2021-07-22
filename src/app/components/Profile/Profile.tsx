@@ -83,9 +83,9 @@ const Profile = () => {
                             <div className="flex flex-col text-lg antialiased items-center sm:mg-2 lg:m-5 font-semibold rounded-lg border shadow-lg sm:p-2 h-80">
                                 <div className="flex h-72 items-center text-2xl">
                                     <div className="flex text-black">
-                                        <a href="https://delta.nitt.edu/" target="_blank" className="hover:text-red-700 p-4" style={{textDecoration: 'none'}}><i className="fab fa-instagram"></i></a>
-                                        <a href="https://delta.nitt.edu/" target="_blank" className="hover:text-red-700 p-4" style={{textDecoration: 'none'}}><i className="fab fa-linkedin-in"></i></a>
-                                        <a href="https://delta.nitt.edu/" target="_blank" className="hover:text-red-700 p-4" style={{textDecoration: 'none'}}><i className="fab fa-facebook-f"></i></a>
+                                        <a href="https://delta.nitt.edu/" target="_blank" rel="noreferrer" className="hover:text-red-700 p-4" style={{textDecoration: 'none'}}><i className="fab fa-instagram"></i></a>
+                                        <a href="https://delta.nitt.edu/" target="_blank" rel="noreferrer" className="hover:text-red-700 p-4" style={{textDecoration: 'none'}}><i className="fab fa-linkedin-in"></i></a>
+                                        <a href="https://delta.nitt.edu/" target="_blank" rel="noreferrer" className="hover:text-red-700 p-4" style={{textDecoration: 'none'}}><i className="fab fa-facebook-f"></i></a>
                                     </div>
                                 </div>
                                 <div className="border-t-2 w-screen"></div>
