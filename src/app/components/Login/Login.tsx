@@ -23,6 +23,7 @@ import {
 import "./Login.css";
 
 const Login = () => {
+  let user="admin";
   return <div className="wrapper center h-full">
     <Container padding className="loginContainer">
       <div className="header">

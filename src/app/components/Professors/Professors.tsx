@@ -4,6 +4,28 @@ import './Professor.css'
 import img from './Assets/icon.jpg';
 
 const Professor=()=>{
+  let professors=[
+    {
+      name:"Professor 1",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      name:"Professor 2",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      name:"Professor 3",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      name:"Professor 4",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      name:"Professor 5",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+  ]
   return(
     <div className="wrapper">
       <div className="grid justify-items-end m-3">
@@ -12,96 +34,26 @@ const Professor=()=>{
         </div>
       </div>
       <div className="main-container mb-10">
-      <Aside>
-        <Label className="filterLabel">Filter By department</Label>
-      <Field>
-  <Select
-    className="border-2 border-black focus:shadow focus:border-red-800"
-    name="select"
-    options={[
-      { value: 'cse', label: 'Computer Science' },
-      { value: 'mech', label: 'Mechanical' },
-      { value: 'ece', label: 'Electrical and Electronics' },
-      { value: 'ice', label: 'Instrumentation and Control' },
-    ]}
-  />
-</Field>
-<Button className="w-40 bg-red-800 text-white">Apply</Button>
-</Aside>
 <div className="results container-1 m-3 flex flex-auto justify-center">
 <Row gutter className='md:h-full'>
-  <Col  w={{ def: 'full', sm: '1/1', md: '1/2', lg: '1/3', xl: '1/3' }} h='md:h-full'>
-  <Card border shadow maxW="sm">
-  <img
-    src={img}
-    alt="Example image"
-  />
-  <CardBody><Article>
-  <ContentTitle size={5}>Professor Name</ContentTitle>
-  <Text is="p">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  </Text>
-</Article></CardBody>
-</Card>
-  </Col>
-  <Col  w={{ def: 'full', sm: '1/1', md: '1/2', lg: '1/3', xl: '1/3' }} >
-  <Card border shadow maxW="sm">
-  <img
-    src={img}
-    alt="Example image"
-  />
-  <CardBody><Article>
-  <ContentTitle size={5}>Professor Name</ContentTitle>
-  <Text is="p">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  </Text>
-</Article></CardBody>
-</Card>
-  </Col>
-  <Col w={{ def: 'full', sm: '1/1', md: '1/2', lg: '1/3', xl: '1/3' }} >
-    <Card border shadow maxW="sm">
-    <img
-    src={img}
-    alt="Example image"
-  />
-  <CardBody><Article>
-  <ContentTitle size={5}>Professor Name</ContentTitle>
-  <Text is="p">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  </Text>
-</Article></CardBody>
-</Card>
-  </Col>
-  <Col  w={{ def: 'full', sm: '1/1', md: '1/2', lg: '1/3', xl: '1/3' }} h='md:h-full'>
-  <Card border shadow maxW="sm">
-  <img
-    src={img}
-    alt="Example image"
-  />
-  <CardBody><Article>
-  <ContentTitle size={5}>Professor Name</ContentTitle>
-  <Text is="p">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  </Text>
-</Article></CardBody>
-</Card>
-  </Col>
-  <Col  w={{ def: 'full', sm: '1/1', md: '1/2', lg: '1/3', xl: '1/3' }} h='md:h-full'>
-  <Card border shadow maxW="sm">
-  <img
-    src={img}
-    alt="Example image"
-  />
-  <CardBody><Article>
-  <ContentTitle size={5}>Professor Name</ContentTitle>
-  <Text is="p">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  </Text>
-</Article></CardBody>
-</Card>
-  </Col>
+  {professors.map((item,key)=>{
+    return(
+      <Col  w={{ def: 'full', sm: '1/1', md: '1/2', lg: '1/3', xl: '1/3' }} h='md:h-full'>
+      <Card border shadow maxW="sm">
+      <img
+        src={img}
+        alt="Example image"
+      />
+      <CardBody><Article>
+      <ContentTitle size={5}>{item.name}</ContentTitle>
+      <Text is="p">
+        {item.description}
+      </Text>
+    </Article></CardBody>
+    </Card>
+      </Col>
+    )
+  })}
 </Row>
 </div>
 </div>

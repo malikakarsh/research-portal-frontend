@@ -8,6 +8,13 @@
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+@media(max-width:600px){
+  .loginContainer,.signupContainer{
+    height: 100%;
+    overflow-y: scroll !important;
+    margin-top: 0;
+  }
+}
 .inputField {
   border: 2px solid rgba(153, 27, 27) !important;
   width: 100% !important;

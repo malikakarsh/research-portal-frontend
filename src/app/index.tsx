@@ -12,6 +12,7 @@ import Research from "./components/Research/Research";
 import Professor from "./components/Professors/Professors";
 import Login from "./components/Login/Login";
 import Signup from "./components/Login/Signup";
+import Lab from "./components/Labs/labs";
 
 const Container = styled.div`
   overflow-y: scroll;
@@ -86,6 +87,9 @@ const App = () => {
                   </Route>
                   <Route exact path="/research">
                     <Research/>
+                  </Route>
+                  <Route exact path="/labs">
+                    <Lab/>
                   </Route>
                 </Switch>
               </Container>

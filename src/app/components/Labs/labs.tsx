@@ -13,83 +13,55 @@ import {
   Text,
   Aside,
 } from "tailwind-react-ui";
-import "./Research.css";
-import img from "./Assets/icon.jpg";
+import "./labs.css";
 
-const Research = () => {
-  let researches = [
+const Lab = () => {
+  let img =
+    "https://images.unsplash.com/photo-1579154204601-01588f351e67?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80";
+  let labs = [
     {
-      name: "Research Title",
+      name: "LAB 1",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      name: "Research Title",
+      name: "LAB 2",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      name: "Research Title",
+      name: "LAB 3",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      name: "Research Title",
+      name: "LAB 4",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      name: "Research Title",
+      name: "LAB 5",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      name: "Research Title",
+      name: "LAB 6",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      name: "Research Title",
+      name: "LAB 7",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
   ];
   return (
     <div className="wrapper">
-      <div className="grid justify-items-end m-3">
-        <div className="searchHolder relative flex w-200 mb-3">
-          {" "}
-          <input
-            type="text"
-            className="searchInput h-10 border-2 border-black pr-8 pl-5 rounded z-0 focus:shadow focus:border-red-800"
-            placeholder="Search"
-          />
-          <div className="absolute top-4 right-3">
-            {" "}
-            <i className="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i>{" "}
-          </div>
-        </div>
-      </div>
+      <div className="grid justify-items-end m-3"></div>
       <div className="main-container mb-10">
-        <Aside>
-          <Label className="filterLabel">Filter By department</Label>
-          <Field>
-            <Select
-              className="border-2 border-black focus:shadow focus:border-red-800"
-              name="select"
-              options={[
-                { value: "cse", label: "Computer Science" },
-                { value: "mech", label: "Mechanical" },
-                { value: "ece", label: "Electrical and Electronics" },
-                { value: "ice", label: "Instrumentation and Control" },
-              ]}
-            />
-          </Field>
-          <Button className="w-40 bg-red-800 text-white">Apply</Button>
-        </Aside>
         <div className="results container-1 m-3 flex flex-auto justify-center">
           <Row gutter className="md:h-full">
-            {researches.map((item, key) => {
+            {labs.map((item, key) => {
               return (
                 <Col
                   w={{
@@ -107,9 +79,7 @@ const Research = () => {
                     <CardBody>
                       <Article>
                         <ContentTitle size={5}>{item.name}</ContentTitle>
-                        <Text is="p">
-                          {item.description}
-                        </Text>
+                        <Text is="p">{item.description}</Text>
                       </Article>
                     </CardBody>
                   </Card>
@@ -123,4 +93,4 @@ const Research = () => {
   );
 };
 
-export default Research;
+export default Lab;

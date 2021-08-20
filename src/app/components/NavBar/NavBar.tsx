@@ -2,6 +2,7 @@ import React from 'react';
 import './NavBar.css';
 import logoSm from './assets/nittLogo.png';
 import logoLg from './assets/nittLogoWide.png'
+import { Link } from 'react-router-dom';
 
 
 const data = [{
@@ -13,7 +14,7 @@ const data = [{
 	text: 'Research'
 },
 {
-	href: '#',
+	href: '/labs',
 	text: 'Labs'
 },
 {
@@ -35,7 +36,7 @@ const  NavBar = (props:any) => {
 						<img src={logoLg} className="sm:h-16 md:h-24" alt="NITT LOGO"/>
 						<button type="button" onClick={toggleSideBar} style={{display:hamburger}}>
 							<svg className="block h-9 w-9  rounded-md hover:bg-red-900 px-1 text-gray-100 hover:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
 							</svg>
 						</button>
 					</div>
@@ -44,14 +45,14 @@ const  NavBar = (props:any) => {
 						<img src={logoSm} className="h-20" alt="NITT LOGO"/>
 						<button type="button" onClick={toggleSideBarMobile}>
 							<svg className="block h-9 w-9  rounded-md hover:bg-red-900 px-1 text-gray-100 hover:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
 							</svg>
 						</button>
 					</div>
 					<div className="hidden sm:block" >
 						<div className="flex justify-end">
-							{data.map((val)=> {
-								return (<a href={val.href} className="text-gray-300 ml-10 px-3 py-1 rounded-md text-md hover:text-white hover:bg-red-900 font-medium">{val.text}</a>);
+							{data.map((val, key)=> {
+								return (<Link to={val.href} key={key} className="text-gray-300 ml-10 px-3 py-1 rounded-md text-md hover:text-white hover:bg-red-900 font-medium">{val.text}</Link>);
 							})}
 						</div>
 					</div>
