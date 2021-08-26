@@ -7,7 +7,15 @@ import { useState } from "react";
 import Home from "./components/Home";
 import styled from "styled-components";
 import Profile from "./components/Profile/Profile";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {BrowserRouter as Router,  Switch,  Route} from "react-router-dom";
+import Research from "./components/Research/Research";
+import Professor from "./components/Professors/Professors";
+import Login from "./components/Login/Login";
+import Signup from "./components/Login/Signup";
+import CorrectionForm from "./components/CorrectionForm/CorrectionForm";
+import MyResearch from "./components/Research/MyResearch";
+import UpdateRoles from "./components/Research/UpdateRoles";
+
 
 const Container = styled.div`
   overflow-y: scroll;
@@ -52,7 +60,7 @@ const App = () => {
     return (
       <div className="flex">
         <Router>
-          <div className="flex-1">
+        <div className="flex-1">
             <NavBar
               toggleSideBar={toggleSideBar}
               toggleSideBarMobile={toggleSideBarMobile}
@@ -65,11 +73,32 @@ const App = () => {
                   <SideBarMob></SideBarMob>
                 </div>
                 <Switch>
-                  <Route exact path="/research-portal-frontend">
+                  <Route exact path="/login">
+                    <Login/>
+                    </Route>
+                    <Route exact path="/signup">
+                    <Signup/>
+                    </Route>
+                  <Route exact path="/">
                     <Home />
                   </Route>
-                  <Route exact path="/research-portal-frontend/profile">
+                  <Route exact path="/profile">
                     <Profile />
+                  </Route>
+                  <Route exact path="/professors">
+                    <Professor />
+                  </Route>
+                  <Route exact path="/research">
+                    <Research/>
+                  </Route>
+                  <Route exact path="/form">
+                    <CorrectionForm/>
+                  </Route>
+                  <Route exact path="/my-research">
+                    <MyResearch/>
+                  </Route>
+                  <Route exact path="/update-role">
+                    <UpdateRoles/>
                   </Route>
                 </Switch>
               </Container>
@@ -77,7 +106,7 @@ const App = () => {
           </div>
           <div style={{ display: state }}>
             <SideBar closeSideBar={closeSideBar}></SideBar>
-          </div>
+        </div>
         </Router>
       </div>
     );

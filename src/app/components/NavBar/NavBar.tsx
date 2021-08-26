@@ -5,11 +5,11 @@ import logoLg from './assets/nittLogoWide.png'
 
 
 const data = [{
-	href: '#',
+	href: '/',
 	text: 'Home'
 },
 {
-	href: '#',
+	href: '/research',
 	text: 'Research'
 },
 {
@@ -17,9 +17,14 @@ const data = [{
 	text: 'Labs'
 },
 {
-	href: '#',
+	href: '/professors',
 	text: 'Profs'
-}];
+},
+{
+	href: '/login',
+	text: 'Login'
+}
+];
 const  NavBar = (props:any) => {
 	const {toggleSideBar,toggleSideBarMobile,hamburger} = props;
 
