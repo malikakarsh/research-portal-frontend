@@ -12,6 +12,9 @@ import Research from "./components/Research/Research";
 import Professor from "./components/Professors/Professors";
 import Login from "./components/Login/Login";
 import Signup from "./components/Login/Signup";
+import CorrectionForm from "./components/CorrectionForm/CorrectionForm";
+import MyResearch from "./components/Research/MyResearch";
+import UpdateRoles from "./components/Research/UpdateRoles";
 import Lab from "./components/Labs/labs";
 
 const Container = styled.div`
@@ -87,6 +90,15 @@ const App = () => {
                   </Route>
                   <Route exact path="/research">
                     <Research/>
+                  </Route>
+                  <Route exact path="/form">
+                    <CorrectionForm/>
+                  </Route>
+                  <Route exact path="/my-research">
+                    <MyResearch/>
+                  </Route>
+                  <Route exact path="/update-role">
+                    <UpdateRoles/>
                   </Route>
                   <Route exact path="/labs">
                     <Lab/>

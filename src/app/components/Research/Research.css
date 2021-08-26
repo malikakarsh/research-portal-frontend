@@ -1,6 +1,7 @@
 .main-container{
   display: flex;
 }
+
 section {
   height: 100%;
 }
@@ -19,6 +20,9 @@ aside{
 @media (max-width:600px) {
   .search_container{
     display: block;
+  }
+  .adminButton {
+    width: 95%;
   }
   .main-container{
     display: block;

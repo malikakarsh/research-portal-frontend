@@ -1,20 +1,8 @@
-import React, { useState } from "react";
-import {
-  Select,
-  Field,
-  Label,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  Button,
-  Article,
-  ContentTitle,
-  Text,
-  Aside,
-} from "tailwind-react-ui";
-import "./Research.css";
-import img from "./Assets/icon.jpg";
+import React, { useState } from 'react';
+import { Select, Field, Label, Row, Col, Card, CardBody, Button, Article, ContentTitle, Text, Aside } from 'tailwind-react-ui'
+import './Research.css'
+import img from './Assets/icon.jpg';
+import {Link} from 'react-router-dom';
 
 const Research = () => {
   let researches = [
@@ -54,19 +42,16 @@ const Research = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
   ];
-  return (
+  const [user,setUser] = useState("admin");
+  return(
     <div className="wrapper">
-      <div className="grid justify-items-end m-3">
-        <div className="searchHolder relative flex w-200 mb-3">
-          {" "}
-          <input
-            type="text"
-            className="searchInput h-10 border-2 border-black pr-8 pl-5 rounded z-0 focus:shadow focus:border-red-800"
-            placeholder="Search"
-          />
-          <div className="absolute top-4 right-3">
-            {" "}
-            <i className="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i>{" "}
+      <div className="flex justify-start">
+        <Link to='/my-research' className="m-3"><Button className="w-40 bg-red-800 text-white">My Research</Button></Link>
+      </div>
+      <div className="flex-1">
+        <div className="grid justify-items-end m-3">
+        <div className="searchHolder relative flex w-200 mb-3"> <input type="text" className="searchInput h-10 border-2 border-black pr-8 pl-5 rounded z-0 focus:shadow focus:border-red-800" placeholder="Search"/>
+              <div className="absolute top-4 right-3"> <i className="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i> </div>
           </div>
         </div>
       </div>
