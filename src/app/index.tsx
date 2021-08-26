@@ -15,7 +15,7 @@ import Signup from "./components/Login/Signup";
 import CorrectionForm from "./components/CorrectionForm/CorrectionForm";
 import MyResearch from "./components/Research/MyResearch";
 import UpdateRoles from "./components/Research/UpdateRoles";
-
+import Lab from "./components/Labs/labs";
 
 const Container = styled.div`
   overflow-y: scroll;
@@ -99,6 +99,9 @@ const App = () => {
                   </Route>
                   <Route exact path="/update-role">
                     <UpdateRoles/>
+                  </Route>
+                  <Route exact path="/labs">
+                    <Lab/>
                   </Route>
                 </Switch>
               </Container>

@@ -25,8 +25,8 @@ const SideBar = (props:any) => {
                 <button onClick={closeSideBar}><h1 className="text-white hover:text-black text-xl"><i className="fas fa-arrow-right"></i></h1></button>
             </div>
             <div className="w-64 text-left pt-3">
-                {data.map((val)=>{
-                    return (<div className="pt-2 pb-2 text-md pl-4 hover:bg-gray-400 cursor-pointer">
+                {data.map((val,key)=>{
+                    return (<div className="pt-2 pb-2 text-md pl-4 hover:bg-gray-400 cursor-pointer" key={key}>
                                 <h1>{val.text}</h1>
                             </div>)
                 })}
