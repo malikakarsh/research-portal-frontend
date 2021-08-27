@@ -13,10 +13,11 @@ const ResearchCard = (props:any) => {
           sm: "1/1",
           md: "1/2",
           lg: "1/3",
-          xl: "1/3",
+          xl: "1/4",
         }}
         h="md:h-full"
-        padding="1"
+        padding="10px"
+        className="m-30"
       >
         <Card border shadow maxW="sm">
           <img src={img} alt="Example image" />

@@ -4,7 +4,7 @@ import './Research.css'
 import img from './Assets/icon.jpg';
 import { axiosInstance } from "../../utils/axios";
 import {Link} from 'react-router-dom';
-import ResearchCard from "./ResearchCard.jsx";
+import ResearchCard from "./ResearchCard";
 
 const Research = () => {
   const [user,setUser] = useState("admin");

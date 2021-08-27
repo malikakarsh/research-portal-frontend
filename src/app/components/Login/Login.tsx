@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import {
   Select,
   Field,
@@ -25,6 +26,7 @@ import { axiosInstance } from "../../utils/axios";
 import config from '../../../env'
 
 const Login = () => {
+  const history = useHistory();
   let user="admin";
   let state={
     email:'',
@@ -47,6 +49,8 @@ const Login = () => {
       }
     }).then((response:any)=>{
       localStorage.setItem('email', response.data.data.email);
+      history.push('/')
+      window.location.reload();
     });
   }
   return <div className="wrapper center h-full">

@@ -26,13 +26,13 @@ const DepartmentCard = (props:any) => {
     <Container
       className="rounded-2xl col-span-1 bg-yellow-200 lg:m-6 m-4 relative"
      >
-      {/* <StyledImage
+      <StyledImage
         className="h-full w-full rounded-2xl"
         src={
           "https://images.unsplash.com/photo-1592030581891-6ebac71d3af2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHJlc2VhcmNoZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
         }
         alt="dummy"
-      /> */}
+      />
       <div className=" absolute bottom-0 h-2/5 w-full bg-gray-400 bg-opacity-50 hover:bg-opacity-80 lg:p-4 md:p-3 p-2">
         <p className="lg:text-2xl md:text-xl text-lg font-bold">{props.data.short_name}</p>
         <p className="lg:text-sm md:text-sm text-xs pb-4">

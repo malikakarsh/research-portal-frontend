@@ -45,7 +45,7 @@ const CorrectionForm = () => {
       console.log(state)
       axiosInstance({
         method:'POST',
-        url:'/project/create',
+        url:'/project/edit',
         data:state
       }).then((res:any)=>{
         console.log(res);
@@ -77,7 +77,7 @@ const CorrectionForm = () => {
            <textarea className="inputField" style={{borderRadius: '5px'}} onClick={handleChange}></textarea>
         </div>
         <div className="items-center loginBtnContainer">
-          <Button className="bg-red-800 text-white loginBtn float-right">SUBMIT</Button>
+          <Button className="bg-red-800 text-white loginBtn float-right" onClick={handleSubmit}>SUBMIT</Button>
         </div>
       </Container>
     </div>:(user==='edit'?<div className="wrapper h-full">
@@ -102,7 +102,7 @@ const CorrectionForm = () => {
            <textarea className="inputField" style={{borderRadius: '5px'}} onClick={handleChange}></textarea>
         </div>
         <div className="items-center loginBtnContainer">
-          <Button className="bg-red-800 text-white loginBtn float-right">SUBMIT</Button>
+          <Button className="bg-red-800 text-white loginBtn float-right" onClick={handleSubmit}>SUBMIT</Button>
         </div>
       </Container>
     </div>:<div className="wrapper h-full">
@@ -127,7 +127,7 @@ const CorrectionForm = () => {
            <textarea className="inputField" style={{borderRadius: '5px'}} disabled={true} onClick={handleChange}></textarea>
         </div>
         <div className="items-center loginBtnContainer">
-          <Button className="bg-red-800 text-white loginBtn float-right">SUBMIT</Button>
+          <Button className="bg-red-800 text-white loginBtn float-right" onClick={handleSubmit}>SUBMIT</Button>
         </div>
       </Container>
     </div>))
