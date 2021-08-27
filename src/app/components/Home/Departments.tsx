@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useEffect, useState } from 'react';
+import { axiosInstance } from "../../utils/axios";
 
 const Container = styled.div`
   height: 27vh;
@@ -19,22 +21,22 @@ transition: transform 1s;
 }
 `;
 
-const DepartmentCard = () => {
+const DepartmentCard = (props:any) => {
   return (
     <Container
       className="rounded-2xl col-span-1 bg-yellow-200 lg:m-6 m-4 relative"
      >
-      <StyledImage
+      {/* <StyledImage
         className="h-full w-full rounded-2xl"
         src={
           "https://images.unsplash.com/photo-1592030581891-6ebac71d3af2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHJlc2VhcmNoZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
         }
         alt="dummy"
-      />
+      /> */}
       <div className=" absolute bottom-0 h-2/5 w-full bg-gray-400 bg-opacity-50 hover:bg-opacity-80 lg:p-4 md:p-3 p-2">
-        <p className="lg:text-2xl md:text-xl text-lg font-bold">Department</p>
-        <p className="lg:text-sm md:text-sm text-xs">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <p className="lg:text-2xl md:text-xl text-lg font-bold">{props.data.short_name}</p>
+        <p className="lg:text-sm md:text-sm text-xs pb-4">
+          {props.data.full_name}
         </p>
       </div>
     </Container>
@@ -42,6 +44,30 @@ const DepartmentCard = () => {
 };
 
 const Departments = () => {
+
+  const [departments, setDepartments] = useState([]);
+
+  useEffect(() => {
+    console.log("test");
+    let url = `/department`;
+    axiosInstance
+      .get(url)
+      .then((res: any) => {
+        setDepartments(res.data.data);
+      })
+      .catch((err: Error) => console.log(err));
+  }, []);
+
+  const getDepartmentCards = ()=>{
+    let htmlArr: JSX.Element[] = [];
+    departments.forEach((dept,index)=>{
+      htmlArr.push(
+        <DepartmentCard data={dept} key={index}/>
+      )
+    });
+    return htmlArr;
+  }
+
   return (
     <div className="w-screen bg-red-800" style={{ minHeight: "85vh" }}>
       <div className=" w-full col-span-2 lg:p-14 md:p-8 p-6 flex justify-center items-start flex-col">
@@ -50,14 +76,7 @@ const Departments = () => {
         </p>
       </div>
       <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-items-center lg:p-14 md:p-8 p-6">
-        <DepartmentCard />
-        <DepartmentCard />
-        <DepartmentCard />
-        <DepartmentCard />
-        <DepartmentCard />
-        <DepartmentCard />
-        <DepartmentCard />
-        <DepartmentCard />
+        {departments.length?getDepartmentCards():null}
       </div>
     </div>
   );

@@ -16,6 +16,7 @@ import CorrectionForm from "./components/CorrectionForm/CorrectionForm";
 import MyResearch from "./components/Research/MyResearch";
 import UpdateRoles from "./components/Research/UpdateRoles";
 import Lab from "./components/Labs/labs";
+import CreateProject from "./components/CreateProject/CreateProject";
 
 const Container = styled.div`
   overflow-y: scroll;
@@ -67,7 +68,7 @@ const App = () => {
               hamburger={hamburger}
             ></NavBar>
             <div style={{ height: '88vh' }}>
-              <Container className='h-full overflow-y-scroll'>
+              <Container className='h-full overflow-y-scroll' style={{overflow: "scroll"}}>
                 {/* Mobile Side Bar */}
                 <div style={{ display: mobState }}>
                   <SideBarMob></SideBarMob>
@@ -91,9 +92,12 @@ const App = () => {
                   <Route exact path="/research">
                     <Research/>
                   </Route>
-                  <Route exact path="/form">
+                  <Route exact path="/edit-project">
                     <CorrectionForm/>
                   </Route>
+                  <Route exact path="/create-project">
+                    <CreateProject/>
+                    </Route>
                   <Route exact path="/my-research">
                     <MyResearch/>
                   </Route>
