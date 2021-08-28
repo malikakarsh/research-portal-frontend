@@ -92,7 +92,7 @@ const App = () => {
                   <Route exact path="/research">
                     <Research/>
                   </Route>
-                  <Route exact path="/edit-project">
+                  <Route exact path="/edit-project/:id">
                     <CorrectionForm/>
                   </Route>
                   <Route exact path="/create-project">
