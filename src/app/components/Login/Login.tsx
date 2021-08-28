@@ -49,8 +49,7 @@ const Login = () => {
       }
     }).then((response:any)=>{
       localStorage.setItem('email', response.data.data.email);
-      history.push('/')
-      window.location.reload();
+      window.location.href='/';
     });
   }
   return <div className="wrapper center h-full">
