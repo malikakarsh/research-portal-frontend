@@ -49,6 +49,7 @@ const CreateProject = () => {
         data:state
       }).then((res:any)=>{
         //console.log(res);
+        window.location.href='/research';
       }).catch((err:any)=>{
         //console.log(err);
       })
